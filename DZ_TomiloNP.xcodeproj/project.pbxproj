@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		389AA7892833DCEA00C43494 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389AA7882833DCEA00C43494 /* SecondViewController.swift */; };
 		E58C28EC2833A636009A17E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58C28EB2833A636009A17E0 /* AppDelegate.swift */; };
 		E58C28EE2833A636009A17E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58C28ED2833A636009A17E0 /* SceneDelegate.swift */; };
 		E58C28F02833A636009A17E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58C28EF2833A636009A17E0 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		389AA7882833DCEA00C43494 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E58C28E82833A636009A17E0 /* DZ_TomiloNP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DZ_TomiloNP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58C28EB2833A636009A17E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E58C28ED2833A636009A17E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				E58C28F42833A639009A17E0 /* Assets.xcassets */,
 				E58C28F62833A639009A17E0 /* LaunchScreen.storyboard */,
 				E58C28F92833A639009A17E0 /* Info.plist */,
+				389AA7882833DCEA00C43494 /* SecondViewController.swift */,
 			);
 			path = DZ_TomiloNP;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				389AA7892833DCEA00C43494 /* SecondViewController.swift in Sources */,
 				E58C28F02833A636009A17E0 /* ViewController.swift in Sources */,
 				E58C28EC2833A636009A17E0 /* AppDelegate.swift in Sources */,
 				E58C28EE2833A636009A17E0 /* SceneDelegate.swift in Sources */,
