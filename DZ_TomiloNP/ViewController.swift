@@ -7,7 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, textForSecondVC {
+    func enterTextFirst(vc: SecondViewController) -> String {
+        firstTextField.text ?? ""
+    }
+    
+    func enterTextSecond(vc: SecondViewController) -> String {
+        secondTextField.text ?? ""
+    }
+    
     let firstTextField: UITextField! = UITextField()
     let secondTextField: UITextField! = UITextField()
     let button: UIButton! = UIButton()
@@ -30,6 +38,7 @@ class ViewController: UIViewController {
         secondTextField.placeholder = "Second"
         
         button.backgroundColor = .gray
+        button.addTarget(self, action: #selector(tappedButton(sender:)), for: .primaryActionTriggered)
         
         NSLayoutConstraint.activate([
             firstTextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
@@ -46,5 +55,9 @@ class ViewController: UIViewController {
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0),
             button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)])
+    }
+    @objc func tappedButton(sender: UIButton) {
+        let secondVC = SecondViewController()
+        present(secondVC, animated: true, completion: nil)
     }
 }
