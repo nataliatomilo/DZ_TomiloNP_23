@@ -59,5 +59,6 @@ class ViewController: UIViewController, textForSecondVC {
     @objc func tappedButton(sender: UIButton) {
         let secondVC = SecondViewController()
         present(secondVC, animated: true, completion: nil)
+        secondVC.delegate = self
     }
 }

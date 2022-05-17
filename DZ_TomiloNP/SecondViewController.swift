@@ -13,8 +13,12 @@ class SecondViewController: UIViewController {
     let secondLabel: UILabel = UILabel()
     let button: UIButton = UIButton()
     
+    weak var delegate: textForSecondVC?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .cyan
         
         firstLabel.translatesAutoresizingMaskIntoConstraints = false
         secondLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -42,6 +46,17 @@ class SecondViewController: UIViewController {
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0),
             button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)])
+        
+        button.addTarget(self, action: #selector(goFirstVC(_ :)), for: .primaryActionTriggered)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        firstLabel.text = delegate?.enterTextFirst(vc: self)
+        secondLabel.text = delegate?.enterTextSecond(vc: self)
+    }
+    
+    @objc func goFirstVC(_ sender: UIButton) {
+        dismiss(animated: true)
     }
 }
 protocol textForSecondVC: AnyObject {
